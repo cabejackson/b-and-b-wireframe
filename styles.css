@@ -1,11 +1,11 @@
 body {
     background-color: lightcyan;
     margin: 0px;
-    text-align: left;
+    /* text-align: left; */
 }
 
 Header h1 {
     background-color: lightsalmon;
     margin: 0px;
-    text-align: left;
+    /* text-align: left; */
 }
