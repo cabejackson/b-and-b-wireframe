@@ -8,7 +8,7 @@
     <title>Quiz App</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
         type="text/css" />
-    <link href="app.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -34,56 +34,137 @@
             </p>
         </div>
         <!-- end of landing page -->
+
+        <!-- start of user sign-up page -->
         <div>
-            <h2>Header would go here</h2>
-            <!-- <img src="photos/kelly-ryan.png" alt="Kelly and Ryan"> -->
+            <!-- header would go at the top of this page too -->
+            <!-- the link to "sign-up" would just link to this page -->
+            <!-- the link to "login" would route to another page -->
             <form>
-                <h2>Question 1?</h2>
-                <input name='answer' type='radio' value='answer1'>
-                <label for='answer1'>Answer 1</label><br>
-                <input name='answer' type='radio' value='answer2'>
-                <label for='answer2'>Answer 2</label><br>
-                <input name='answer' type='radio' value='answer3'>
-                <label for='answer3'>Answer 3</label><br>
-                <input name='answer' type='radio' value='answer4'>
-                <label for='answer4'>Answer 4</label><br>
-                <button class='submit-answer' type='submit'>Submit Answer!</button>
+                <h2>Fill out the form below to sign-up for an account</h2>
+                <input name='firstName' type='text' required />
+                <label for='firstName'>First Name</label><br>
+                <input name='lastName' type='text' required />
+                <label for='lastName'>Lastst Name</label><br>
+                <input name='email' type='email' required />
+                <label for='email'>Email</label><br>
+                <input name='password' type='password' required />
+                <label for='password'>Password</label><br>
+                <button id='submit-sign-up' type='submit'>CREATE ACCOUNT</button>
             </form>
-            <h3>Question 3 / 5</h3>
-            <h3>You have: 1 Correct Answer, and 1 Incorrect Answer!</h3>
+            <!-- end of user sign-up page -->
+
+            <!-- start of user login page -->
             <div>
-                <!-- Page with Feedback -->
-                <h1>The Heading would go here!</h1>
-                <img src="photos/kelly-ryan.png" alt="Kelly and Ryan">
                 <form>
-                    <h2>Question 1?</h2>
-                    <input name='answer' type='radio' value='answer1'>
-                    <label for='answer1'>Answer 1</label><br>
-                    <input name='answer' type='radio' value='answer2'>
-                    <label for='answer2'>Answer 2</label><br>
-                    <input name='answer' type='radio' value='answer3'>
-                    <label for='answer3'>Answer 3</label><br>
-                    <input name='answer' type='radio' value='answer4'>
-                    <label for='answer4'>Answer 4</label><br>
-                    <button type='submit' class="button-next-question">Next Question</button>
+                    <h2>Login to your account below!</h2>
+                    <input name='email' type='email' required />
+                    <label for='email'>Email</label><br>
+                    <input name='password' type='password' required />
+                    <label for='password'>Password</label><br>
+                    <button id='submit-login' type='submit'>LOGIN</button>
                 </form>
-
-                <h3>Feedback: Correct!(or Wrong!)</h3>
-
-                <!-- questions completed / total questions -->
-                <h3>Question 3 / 5</h3>
-                <h3>You have: 2 Correct Answer, and 1 Incorrect Answer!</h3>
-
             </div>
+            <!-- end of user login page -->
 
+
+            <!-- start of user homepage -->
+            <!-- header would go at the top of this page too, -->
+            <!-- but nav would include a logout button routing to landing page -->
+            <!-- also, this header could say "welcome back . . ." -->
+            <h3>Please select an option below:</h3>
             <div>
-                <img src="photos/happy-stanley.png" alt="Happy Stanley">
-                <h2>Nice Job!</h2>
-                <p>You got ${score}!</p>
-                <button class="button-restart-quiz">START QUIZ AGAIN!</button>
-
+                <button type='button' id="button-go-to-new-game">NEW GAME</button>
+                <button type='button' id="button-go-to-saved-games">SAVED GAMES</button>
             </div>
+            <!-- end of user homepage -->
 
+            <!-- start of returning user "Saved Games" Page -->
+            <!-- header would go at the top of this page too, -->
+            <!-- but nav would include a logout button routing to landing page -->
+            <!-- also, this header could say "welcome back . . ." -->
+            <div>
+                <h3>
+                    Here’s a list of your saved games.
+                    <br>
+                    You may edit the title or delete them.
+                    </br>
+                </h3>
+                <!-- how do I show a list of tables? -->
+                <!-- a bunch of ordered li tags maybe?-->
+                <table style="width:50%">
+                    <!--test out different widths-->
+                    <tr>
+                        <th>SAVED TITLE</th>
+                        <th>DATE OF GAME</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>exampleTitle1</td>
+                        <td>01/01/1970</td>
+                        <td>✏️</td>
+                        <td>🗑</td>
+                    </tr>
+                    <tr>
+                        <td>exampleTitle2</td>
+                        <td>11/09/2016</td>
+                        <td>✏️</td>
+                        <td>🗑</td>
+                    </tr>
+                </table>
+                <h3>You can start a new game by clicking the button below:</h3>
+                <button id="button-restart-game">NEW GAME</button>
+            </div>
+            <!-- end of returning user "Saved Games" Page -->
+
+            <!-- start of TBR Game Page -->
+
+            <!-- header would go at the top of this page too, -->
+            <!-- IF RETURNING USER: -->
+            <!-- nav would include a logout button routing to landing page -->
+            <!-- also, this header could say "welcome back . . ." -->
+            <!-- IF NEW USER: -->
+            <!-- nav would include a "sign-up" and "login" links routing to those pages -->
+            <!-- also, this header could say "welcome  . . ." -->
+
+            <!-- backside-of-card would eventually need to be 12 unique cards -->
+            <div>
+                <h3>I would like to read
+                    <input type="number" placeholder="5" required />
+                    books this month!
+                </h3>
+                <h3>Choose "X" cards!</h3>
+                <br><img src="photos/backside-of-card.jpg" alt="card-1" /></br>
+                <br><img src="photos/backside-of-card.jpg" alt="card-2" /></br>
+                <br><img src="photos/backside-of-card.jpg" alt="card-3" /></br>
+                <button id="button-reveal-cards">REVEAL CARDS!</button>
+            </div>
+            <!-- end of TBR Game Page -->
+
+            <!-- start of Reveal Cards Page -->
+            <div>
+                <h3>
+                    Here’s your reading prompts!
+                </h3>
+                <ul>
+                    <li>
+                        <img src="photos/backside-of-card.jpg" alt="card-1" />
+                        <p>authentic readymade chillwave snackwave </p>
+                    </li>
+                    <li>
+                        <img src="photos/backside-of-card.jpg" alt="card-2" />
+                        <p>unicorn four dollar toast readymade selvage crucifix</p>
+                    </li>
+                    <li>
+                        <img src="photos/backside-of-card.jpg" alt="card-3" />
+                        <p>trust fund chambray, cliche brunch next</p>
+                    </li>
+                </ul>
+
+                <button id="button-save-game">SAVE GAME!</button>
+            </div>
+            <!-- end of Reveal Cards Page -->
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
